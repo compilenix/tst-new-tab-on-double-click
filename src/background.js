@@ -63,7 +63,7 @@ async function main() {
             new_tab_position = new_tab_position === constant.NEW_TAB_POSITION_FIRST_CHILD ? constant.NEW_TAB_POSITION_LAST_CHILD : constant.NEW_TAB_POSITION_FIRST_CHILD
           }
 
-          console.log(message.tab)
+          console.log('add child tab to', message.tab)
           if (new_tab_position === constant.NEW_TAB_POSITION_FIRST_CHILD) {
             console.log("new_tab_position is first child, create first child tab")
             let tab = await browser.runtime.sendMessage(constant.TST_ID, { type: 'create', params: {
@@ -78,11 +78,21 @@ async function main() {
             })
           } else {
             console.log("new_tab_position is last child, create last child tab")
+
+            // find last child tab id recursively in message.tab.children
+            let hasChildren = message.tab.children.length > 0
+            let currentTab = message.tab
+            while (hasChildren) {
+              currentTab = currentTab.children.at(-1)
+              hasChildren = currentTab.children.length > 0
+            }
+            console.log("last child tab: ", currentTab)
+
             let tab = await browser.runtime.sendMessage(constant.TST_ID, { type: 'create', params: {
               active: true,
               windowId: message.tab.windowId,
               openerTabId: message.tab.id,
-              index: message.tab.children.at(-1).index + 1
+              index: currentTab.index + 1
             }})
             let _ = await browser.runtime.sendMessage(constant.TST_ID, {
               type: 'focus',
