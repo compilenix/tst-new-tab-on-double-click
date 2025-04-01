@@ -1,0 +1,13 @@
+{
+    "extensionName": { "message": "TST New Tab On Double Click" },
+    "extensionDescription": { "message": "Open a new tab when double clicking on an existing tab" },
+
+    "config_section_name": { "message": "Control new tab position on double click" },
+    "config_section_shortcut_hint": { "message": "Hint: Ctrl + double click to invert action" },
+    "config_option_none": { "message": "Do nothing (default)" },
+    "config_option_first_child": { "message": "Open new tab as first child" },
+    "config_option_last_child": { "message": "Open new tab as last child" },
+    "config_section_name_actions": { "message": "Actions" },
+    "config_action_save": { "message": "Save" },
+    "config_action_save_success": { "message": "saved!" }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>__MSG_extensionName__</title>
+        <meta name="color-scheme" content="light dark">
+        <style>
+            ul {
+                margin-top: 5px;
+                margin-bottom: 0px;
+            }
+            #save-message-success {
+              color: green;
+              font-weight: bold;
+              display: none;
+              margin-left: 5px;
+            }
+            .fade-out {
+              animation: fadeOut 3s forwards;
+            }
+            @keyframes fadeOut {
+              to {
+                opacity: 0;
+              }
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>__MSG_config_section_name__</legend>
+            <span>__MSG_config_section_shortcut_hint__</span>
+            <ul>
+                <li><label><input type="radio" name="new_tab_position" value="0" checked>__MSG_config_option_none__</label></li>
+                <li><label><input type="radio" name="new_tab_position" value="1" checked>__MSG_config_option_first_child__</label></li>
+                <li><label><input type="radio" name="new_tab_position" value="2" checked>__MSG_config_option_last_child__</label></li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>__MSG_config_section_name_actions__</legend>
+            <button id="save-button">__MSG_config_action_save__</button>
+            <span id="save-message-success">__MSG_config_action_save_success__</span>
+        </fieldset>
+        <script type="module" src="options.js"></script>
+    </body>
+</html>

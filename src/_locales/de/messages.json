@@ -1,0 +1,13 @@
+{
+    "extensionName": { "message": "TST Neuer Tab bei Doppelklick" },
+    "extensionDescription": { "message": "Öffnet einen neuen Tab als Kind-Tab beim Doppelklick auf einen Tab" },
+
+    "config_section_name": { "message": "Legen Sie fest, wo ein neuer Tab beim Doppelklick geöffnet werden soll" },
+    "config_section_shortcut_hint": { "message": "Tipp: Strg + Doppelklick, um die Aktion umzukehren" },
+    "config_option_none": { "message": "Nichts tun (Standard)" },
+    "config_option_first_child": { "message": "Neuen Tab als ersten Kind-Tab öffnen" },
+    "config_option_last_child": { "message": "Neuen Tab als letzten Kind-Tab öffnen" },
+    "config_section_name_actions": { "message": "Aktionen" },
+    "config_action_save": { "message": "Speichern" },
+    "config_action_save_success": { "message": "gespeichert!" }
+}
