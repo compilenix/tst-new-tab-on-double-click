@@ -4,6 +4,16 @@ This is a Firefox extension that opens a new tab as a child tab when double-clic
 
 ## Installation
 
+There are several ways to install this extension:
+
+- From Firefox Add-ons
+- From Git Releases
+- From Source
+
+After installing the extension, make sure that you have set "Double click on a tab" in Tree Style Tab's "Tree Behavior" settings to "Do nothing".
+
+![Screenshot](./screenshots/Screenshot%20Tree%20Style%20Tab%20Options%20-%20Tree%20Behavior.png)
+
 ### From Firefox Add-ons
 
 1. Go to the [Firefox Add-ons page](https://addons.mozilla.org/en-US/firefox/addon/tst-new-tab-on-double-click/)
